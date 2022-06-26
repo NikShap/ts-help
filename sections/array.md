@@ -1,7 +1,10 @@
+[<- Назад](../README.md)
+
+Оглавление
+- [Array](#array)
+- [Tuple](#tuple)
 # Array
 
-- [Array](#array)
-  - [Tuple](#tuple)
 
 ```
 тип[]
@@ -22,7 +25,7 @@ type NumbersArray4 = ReadonlyArray<boolean>;
 
 ```
 
-## Tuple
+# Tuple
 
 ```
 [тип1, тип2, тип3, тип4]

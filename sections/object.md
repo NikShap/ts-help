@@ -1,10 +1,12 @@
-# Objects
+[<- Назад](../README.md)
 
+Оглавление
 - [Objects](#objects)
-  - [Модификаторы](#модификаторы)
-  - [Сигнатура индексов](#сигнатура-индексов)
-  - [Mapped types](#mapped-types)
-  - [Наследование](#наследование)
+- [Модификаторы](#модификаторы)
+- [Сигнатура индексов](#сигнатура-индексов)
+- [Mapped types](#mapped-types)
+- [Наследование](#наследование)
+# Objects
 
 [**Link**](https://www.typescriptlang.org/play?#code/MYewdgzgLgBCBGArApsKBGGBeGBvAsAFAwkwAeAXDOgAwA0RpMAnlQEz1EC+RRoksBCjRtseRqQBOyACZUA5AGIAYsprqa8hsVIBzacjALF61eq0SS8ADYBXZMY01VFwlxgBDCDH7QA3LyEUMwADsgwAAogAJZgsDgEOpQwYLYAtvDIkgE6rCnpmdncgbFQWQBmHsDhAKoQWeI6JNFy+RlZOUxgHmkOMNCSsbqdpMhpHtHWVANDOTyEQA)
 ```
@@ -50,7 +52,7 @@ interface User {
 }
 ```
 
-## Модификаторы
+# Модификаторы
 
 Помимо типа, свойствам объекта можно задать модификаторы. Их два: 
 
@@ -85,7 +87,7 @@ pointA.z = 5;
 pointA.id = 2; // Cannot assign to 'id' because it is a read-only property.
 ```
 
-## Сигнатура индексов
+# Сигнатура индексов
 
 [**Link**](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgKoGdrIN4FgBQyRywAJgFzIgCuAtgEbQDcBxVctEl6YUoA5i0LEItOMAA23XgKFsEAe2rgoATwD80viEEEAvgQIB6I8gDax022zJFy3qsoByOE+R6ANMktsctpSqOyE70bp7e+Ca+NnaBzqHuXj7W-vZqzghhSZFWxDEBDs6uiRFRKbGFwaRZyXmpccEJnj4AuoY5OLVEcJRm2OH9LR5dyPS9-V4TOHpDIwjjM8MdbBTmg0tRBvgEoJCwiCgA4lBKAA4QpBjQ6J3CZsdnWgItlFdQZi1CekA)
 
@@ -125,7 +127,7 @@ type GroupedUsers = {
 }
 ```
 
-## Mapped types
+# Mapped types
 
 [**Link**](https://www.typescriptlang.org/play?#code/C4TwDgpgBASg4gIQGoEMA2BXCBnKBeKAbQDsMBbAIwgCcAaKUym+xq6gXQG4BYAKD9CQoAZTQBLAMYQAJgGEA9mnnVcBAN58oUMNTFkU1EAC5YiVJhy1NUbBAnzi0gyAD8J+MnRZsV3loooEgDWAObU8hiObqaeFj58AL58fAD0KVAavGla2rr6hiYA5NQhFAAUAJSFvtlatvaOzkUl5VU16f6BoeGR0s2lldWp6Un8vILQCkoq+BnWhFPKUGLEUEEQIPIAZiLiUnKKytjsJtjAusQhPLwJQA)
 
@@ -197,7 +199,7 @@ type Colors = {
 // }
 ```
 
-## Наследование
+# Наследование
 
 Если типы нескольких объектов имеют ряд повторяющихся свойств возможно стоит применить наследование. 
 

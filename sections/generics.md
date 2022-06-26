@@ -1,16 +1,17 @@
-- [Generics](#generics)
-  - [Как объявить?](#как-объявить)
-  - [Пример использования](#пример-использования)
-  - [Ограничение типа-переменной](#ограничение-типа-переменной)
-  - [Автоматическое выведение типа](#автоматическое-выведение-типа)
-    - [Попытка объяснить номер 1:](#попытка-объяснить-номер-1)
-    - [Попытка объяснить номер 2:](#попытка-объяснить-номер-2)
+[<- Назад](../README.md)
 
-# Generics
+Оглавление
+- [Универсальные типы (Generic)](#универсальные-типы-generic)
+- [Пример использования](#пример-использования)
+- [Ограничение типа-переменной](#ограничение-типа-переменной)
+- [Автоматическое выведение типа](#автоматическое-выведение-типа)
+  - [Попытка объяснить номер 1:](#попытка-объяснить-номер-1)
+  - [Попытка объяснить номер 2:](#попытка-объяснить-номер-2)
+
+# Универсальные типы (Generic)
 
 Дженерики - это возможность писать более обобщенную типизацию, которая подстраивается под ситуацию.
 
-## Как объявить?
 Интерфейс
 ```ts
   interface A<T> {/*...*/}
@@ -25,7 +26,7 @@
   const C2 = <T>() => {/*...*/}
 ```
 
-## Пример использования
+# Пример использования
 Предположим, что сервер возвращает вам данные в формате
 
 [**Link**](https://www.typescriptlang.org/play?#code/C4TwDgpgBAqgzhATlAvFKBvAsAKHegSwBMAuKOYRAgOwHMBuXfKagQwFsIyKq7G98rAG6tgrRN0o0GuAL65coSFACCYAgCUIcMAHtqCVJiZROcOK1pdyUviaSJdEqACNdugDYRW1fuiKirGQArtQA1tS6AO6+cgo4AMb6FFCIEACOwdrARgAUYKIAFpK8tACUZGqa2noG0CgAfMYC6AD0rVAAdN0m6GnAwYjUzcz+gWQA2gC6ADS9+A5OZABmrB4Icy34ZhZWZADkAPIA0vubzPI4l7hJBjkYUAFiIQiIcFCyRmmZ2bn7rcFXnB9mV+LcUg8nkEoHoUp80N8shQ-q1YcBWgAmEFg5L3R7jKBJdicajAd7w1IZJHAFFozGtIkksnY+LgnKApBwACSRHeaA5b067FYYFyuQexA+ZVQTWIoKAA)
@@ -125,7 +126,7 @@ const { data } = request<User[]>('/users');
 const usersIds = data.map(({ id }) => id)
 ```
 
-## Ограничение типа-переменной
+# Ограничение типа-переменной
 
 [**Link**](https://www.typescriptlang.org/play?#code/C4TwDgpgBAaghgGwJYBMAidhwCrmgXigFcA7AaxIHsB3EgbQF0oAfKAJQgGNKAnFAHgDOwHkhIBzADTFyVWgD4A3AFgAUGtCQoAQTBIOgsJRKCI-DFigQAHsAgkUg2IlQWceeVEIBvNVCgAthCCgnDiEABcUMKiEiqq-hA8PLxRAEaUlAgQcCTx-iiYcFFu8QC+QA)
 
@@ -149,7 +150,7 @@ type ApiResponse<Data extends ValidDataType = ValidDataType> = {
 }
 
 
-## Автоматическое выведение типа
+# Автоматическое выведение типа
 
 [**Link**](https://www.typescriptlang.org/play?#code/MYewdgzgLgBIgiAEMAOBLKCA2KBeBTGAvDABTQBOAXDOSmAOYCUhAfDAN4CwAUDLzKJFjAAFgjIRC1KGQB0EJFijEA5MoYBubn36jxAbQAMAXUkixEQ0ZlQQAVSRJcZAMIIIuYhu5a+ZXFABXMjAdcxkAKxBaFTVNLgBfby4BaBgA9zIAOQQAW3wiRFR0LDwVACMQMtigA)
 
@@ -180,13 +181,13 @@ const сapitalize = <T extends string>(str: T): Capitalize<T> => {
 
 const userName = сapitalize('bob'); // 'Bob'
 ```
-### Попытка объяснить номер 1:
+## Попытка объяснить номер 1:
 - `<T extends string>` - это ограничение типа `T`. Если дословно, то `T` должно наследовать свойства абстрактного типа `string`. 
 - `(str: T)` - тип `str` будет зависеть от переданного значения, но при этом ограничен вышеупомянутым `string`
 - `Capitalize<T>` - будет брать динамический `T` и капитализировать
 - `return chars.join('') as Capitalize<T>` - тайпскирит не понимает что наши манипуляции над строкой реально привели к тому что строка будет капитализирована, поэтому мы затыкаем ошибку и говорим, что знаем лучше; Будте осторожны с `as`, такое затыкание ошибки может вызвать баги, если что-то пойдет не по плану.
 
-### Попытка объяснить номер 2: 
+## Попытка объяснить номер 2: 
 
 Когда мы пишем реализацию функции нам нет дела до конкретной строки которая будет передана в неё, всё что нам нужно, это ограничить параметр строковым типом данных, поэтому `T extends string`. Другими словами внутри самой функции str воспринимается как абстрактная строка. Это даёт возможность вызывать метод строки `split('')`.
 

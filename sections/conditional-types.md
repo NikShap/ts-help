@@ -1,6 +1,9 @@
+[<- Назад](../README.md)
+
+Оглавление
 - [Условные типы (`Conditional Types`)](#условные-типы-conditional-types)
-  - [`Union` и `never`](#union-и-never)
-  - [Выведение типа `(infer)`](#выведение-типа-infer)
+- [`Union` и `never`](#union-и-never)
+- [Выведение типа `(infer)`](#выведение-типа-infer)
 
 # Условные типы (`Conditional Types`)
 
@@ -45,7 +48,7 @@ type NewUser = User<'new'>;
 type Legacy = User<'legacy'>
 ```
 
-## `Union` и `never`
+# `Union` и `never`
 Если условный тип применяется к объединению типов, то условие будет проверяться для каждого из них, а на выходе получится объединение результатов.
 
 [**Link**](https://www.typescriptlang.org/play?#code/C4TwDgpgBAqgdgSwPZygXigcgIaagHywCM9CBGABgKjgFcBbIiAJwG0BdaugG24G4AsAChhoSFADCtAM5J6AUQAeAY260AJhAA8AFQA0sAHzooOqBEXAIcddNhQA-DQgA3FlABcpwSKFjoUtLAciaBckqqGtrwyHAGQcwIcADmxsIA9OlYuOaW1rZQCUnJUKVl6MZwriwZWZgkuVY2dkUp5WVoldXMtVCUjfktwIlt7aWdfRS9dIwsHAPNhcPF45UMTGzs07S8CwWtJe0TPNxAA)
@@ -64,7 +67,7 @@ type Custom = CusomExclude<Union, string>
 ```
 Условные типы это то место где `never` незаменим, так как он удаляется из объединения
 
-## Выведение типа `(infer)`
+# Выведение типа `(infer)`
 Ключевой слово `ifer` позволяет указать тайпскрипту на необходимость вывести тип.
 
 [**Link**](https://www.typescriptlang.org/play?#code/C4TwDgpgBAqgdgazgewO5wGIFc4GNgCWycUAvFABQB0NAhgE4DmAXFDkmnANoC6AlGQB8bRCnQBuALAAoGaEhQAwlgDOwZAFsAShGBZ6cACrgIAHmx4oEAB7AIcACYrYozhfxE4w8hRlQo7la29k6UAqTCBHAAZhD0UDp6BsaQfv5QAPwJuvpGJmn+rHAQAG5x6TJ8UrLS8tAAcrSEZWTZSXmQphThwnBYGgBGcYLVdUqq6hqtymqaibkpZt1CUH2Dw+JAA)

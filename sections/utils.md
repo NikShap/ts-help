@@ -1,18 +1,19 @@
-# Утилиты и прочее
-- [Утилиты и прочее](#утилиты-и-прочее)
-  - [Тип переменной (`typeof`)](#тип-переменной-typeof)
-  - [Ключи объекта (`keyof`)](#ключи-объекта-keyof)
-  - [Доступ по ключам / индексам (`User['id']`)](#доступ-по-ключам--индексам-userid)
-  - [Record`<Keys, Type>`](#recordkeys-type)
-  - [Partial`<Type>`](#partialtype)
-  - [Required`<Type>`](#requiredtype)
-  - [Readonly`<Type>`](#readonlytype)
-  - [Pick`<Type, Keys>`](#picktype-keys)
-  - [Omit`<Type, Keys>`](#omittype-keys)
-  - [Extract`<Type, Union>`](#extracttype-union)
-  - [Exclude`<UnionType, ExcludedMembers>`](#excludeuniontype-excludedmembers)
+[<- Назад](../README.md)
 
-## Тип переменной (`typeof`)
+Оглавление
+- [Тип переменной (`typeof`)](#тип-переменной-typeof)
+- [Ключи объекта (`keyof`)](#ключи-объекта-keyof)
+- [Доступ по ключам / индексам (`User['id']`)](#доступ-по-ключам--индексам-userid)
+- [Record`<Keys, Type>`](#recordkeys-type)
+- [Partial`<Type>`](#partialtype)
+- [Required`<Type>`](#requiredtype)
+- [Readonly`<Type>`](#readonlytype)
+- [Pick`<Type, Keys>`](#picktype-keys)
+- [Omit`<Type, Keys>`](#omittype-keys)
+- [Extract`<Type, Union>`](#extracttype-union)
+- [Exclude`<UnionType, ExcludedMembers>`](#excludeuniontype-excludedmembers)
+
+# Тип переменной (`typeof`)
 
 [**Link**](https://www.typescriptlang.org/play?#code/MYewdgzgLgBA5gUygVQggTjAvDAFASwBMAuGadfMOASmwD48BvAWACgYYoBPABwVIDkAcQCiAFQD6yAMoiAShIBCATQkBJACICYAQwgxQkKABo2HHjq4AbEDpIwip1gF9qbNoegwAwgHkAMr5y0tgwLOww6Aj2AuhwAEa4AEwArCnGMAAMGZnUAk4ccFEIYIJxidkwqelZeQUw8VYArvwwsQm4lZXVdWzOuvqeUADc7qzcfDBCSKgYilxqhACCwFD44KETCCAAZvAzaOij47wIPiA26Po4W7s+AUHSw0A)
 
@@ -32,7 +33,7 @@ type GetUserByIdAction = typeof getUser;
 type Colors = typeof COLORS;
 ```
 
-## Ключи объекта (`keyof`)
+# Ключи объекта (`keyof`)
 
 [**Link**](https://www.typescriptlang.org/play?#code/C4TwDgpgBAwg9gGzgJwM5QLxQN4FgBQUUyEAJgFxQDkyA5gEYAUATAKysA0UADF9wJRUOBIrRIQAdpRoNGvKG049BwwlHoIArhGl0m8+YpUioAdwAWAS2A7qeluy6Kn7Y-gC+BAqEixEKADkAQwBbaCwAawgQOAAzPyQ0AG4vfAB6NKgECGAoIMp4ROCw1J9oAAU4SwlcrABtAA9KCU0Q+ghkLhBm1vbOqAAvHraOgF0U-G9wCqqagGlo9EjouKhK6uAJggysnPVKdfnFoA)
 
@@ -51,7 +52,7 @@ type Point = [x: number, y: number, z: number];
 type PointKeys = keyof Point; // '0' | '1' | '2' | 'map' | 'forEach' | 'filter' | и т.д.
 ```
 
-## Доступ по ключам / индексам (`User['id']`)
+# Доступ по ключам / индексам (`User['id']`)
 
 [**Link**](https://www.typescriptlang.org/play?#code/PTAEkIQQmEEPhBE4QRBEEEIglAMIKahGEEFIghWEEFwgiKAsAFCkAuAngA4CmoAqgM60BOoAvKAN6migBLACYAuUADsArgFsARmwDcfQUwCCAY3ICAbrTGyA9gYA2tAIbilJfuLPS9oJuVYDxAcyv8z2s+TOsxJxd3T1A3VgNJagBJUUdnVw9SAF8rChp6AHFacmY2Tn4ACmExPNYAbQByYUqAXQBKTgA+RhZWNJIqOlBVY2MygAUIulYqABUMgrLygGtaSgMAM1a2Wo6QUEBaEEBuEBxAHhAcQF4QREBpEFA9lHh4QA4QVFJ07oBZA3FyAAsAGQEnAvLxWl0rAANKBKoB6EEOqEAAiCAGRBKiDKoASEFokChKG2cIRgBwQFBQxDw0GABBBAPwgUJwGIJlRxsEpgAwQQByIIdMaCGRSEYTIIBmEEAwiBISngI6IQDyIBhYZTAHggBBFYoRgFwQaDS5mVQAoIPgUKK4Wt7p1JgB1VzkNjPV5vArG95fJzlACMoAAPqAAEz20DWx1asg6p4vd4FUDmz7fch-GTyVi1bVAA)
 
@@ -80,7 +81,7 @@ type WinterMonth = MonthList[1 | 2 | 12];
 type Month =  MonthList[number]
 ```
 
-## Record`<Keys, Type>`
+# Record`<Keys, Type>`
 Полезная утилка, создаёт тип объекта с ключами из первого параметра и типом значений из второго
 
 [**Link**](https://www.typescriptlang.org/play?#code/C4TwDgpgBAggdiA8gIwFYQMbCgXigJUwHsAnAEwB4BDBAGihpAD4BYAKFEigGEiAbUgGdcBYuQoByEhDISoAHygTkfAK4Q5iiQHNpEOJqUB3ABYBLYBvqDgJM3G2s27TtACqgiCREBvdlCgzMgAuKDhVAFtkLwBuf0DBGCwzADcIUOQifggaOLYAuCoI9KgbOwc8gKoUqmAqElCy+21KqF0iVTAASRDS22a8gF88l3BoAHESDsgyDy9hPEIMUko5kgBtHSnOnokAXXo1piA)
@@ -100,7 +101,7 @@ type User = {
 type GroupedUsers = Record<User['groupId'], User>
 ```
 
-## Partial`<Type>`
+# Partial`<Type>`
 Утилита возвращающая тип у которого все свойства опциональны.
 
 [**Link**](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgAoHsDOZkG8CwAUMsmMGADYQBcy2UoA5gNxEmQAeYt9TrxyYAFs4jCAH4eYBiBZtSozFJmMA2gF1+AXyJEE6ENjoQwGbABE4YOMgC8yABQgIAd0vXaqOFDJwKAHjMwAD4ASjtgxwIBMABPAAcaZAByAGUAUQAVAH1UAHlUnPMAQUzi5IAaeXi4WIp0OAATWmc3Kzgqwi1Q3UJMEyD3OAdo9kVaVWSwTEqUgFcyCnIZ9SJuoA)
@@ -123,7 +124,7 @@ setPostData({
 })
 ```
 
-## Required`<Type>`
+# Required`<Type>`
 
 Утилита возвращающая тип объекта у которого все свойства обязательны. Допустим в UI пользователю не обязательно указывать image, но сервер требует это поле в теле запроса. 
 
@@ -148,7 +149,7 @@ const savePost = (post: Post) => {
 };
 ```
 
-## Readonly`<Type>`
+# Readonly`<Type>`
 
 Создаёт тип, свойства которого нельзя переназначить, только читать. Как пример использования, можно привести объект props в копонентах. Как оказалось, есть люди, которые пытаются менять что-то в этом объекте. 
 
@@ -190,7 +191,7 @@ const PostCard = (props: Readonly<Props>) => {
 };
 ```
 
-## Pick`<Type, Keys>`
+# Pick`<Type, Keys>`
 
 Конструирует тип объекта, включая свойства с указанными ключами из другого типа.
 
@@ -208,7 +209,7 @@ interface Post {
 type PostPreview = Pick<Post, 'title' | 'text'>
 ```
 
-## Omit`<Type, Keys>`
+# Omit`<Type, Keys>`
 
 Утилита обратная по функционалу утилите `Pick`.
 
@@ -227,7 +228,7 @@ interface Todo {
 type TodoPreview = Omit<Todo, "description">;
 ```
 
-## Extract`<Type, Union>`
+# Extract`<Type, Union>`
 
 Конструирует тип включая указанные типы из объединения
 
@@ -240,7 +241,7 @@ type WithLength = Extract<UnionType, { length: number }> // string | [1, 2, 3]
 ```
 
 
-## Exclude`<UnionType, ExcludedMembers>`
+# Exclude`<UnionType, ExcludedMembers>`
 
 Конструирует тип исключая указанные типы из объединения
 

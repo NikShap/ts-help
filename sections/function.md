@@ -1,14 +1,17 @@
-# Function
+[<- Назад](../README.md)
 
+Оглавление
 - [Function](#function)
-  - [Function Declaration](#function-declaration)
-  - [Function Expression](#function-expression)
-  - [Типизация возвращаемого значения](#типизация-возвращаемого-значения)
-  - [Типизация в отрыве от объявления](#типизация-в-отрыве-от-объявления)
-  - [Колбэки](#колбэки)
-  - [Допущения при проверке типов](#допущения-при-проверке-типов)
-  - [Перегрузка функций (Function Overloads)](#перегрузка-функций-function-overloads)
-  - [Rest параметры/аргументы](#rest-параметрыаргументы)
+- [Function Declaration](#function-declaration)
+- [Function Expression](#function-expression)
+- [Типизация возвращаемого значения](#типизация-возвращаемого-значения)
+- [Типизация в отрыве от объявления](#типизация-в-отрыве-от-объявления)
+- [Колбэки](#колбэки)
+- [Допущения при проверке типов](#допущения-при-проверке-типов)
+- [Перегрузка функций (Function Overloads)](#перегрузка-функций-function-overloads)
+- [Rest параметры/аргументы](#rest-параметрыаргументы)
+
+# Function
 
 ```
 (a: тип_1, b: тип_2): возвращаемый_тип
@@ -16,7 +19,7 @@
 ```
 
 [**Link**](https://www.typescriptlang.org/play?#code/PTAEDEFcDsGMBcCWB7aoAiBTWAbAhgE55KoCwAUBQGYwIpo1xa6HH0AUAHgFyjSQBbAEaYCAGlABPXv2GiJALxmCRBUAF5QABgkATTAGdYBRAAcS0APy8D8E9ADmASlABvCqFAFM8SATTu5J6enGIewZJhQcEKUcGg+kYm5vRxoAC+FJmU5CAQtBagAKKcpt4GBvQUFLCotqCMsCVlhpWoGqDs0HgCmDZ2iI4SeA59fCqiLuoAfKAABgAkrt296Z1LI5jpTnMA3NW5YABKPn5oACqSppgHtdD1dwBuovDnyAByE2qa7AbIvfAABaDBy8GAAa2gyAA7tAnMo5N9Zp9Eb9-j5gY4nPsco1Ck8Xm8AMoDRxogGY0GgCFQ2Hw0C2ewONzhby+fygElM8kYkFOLIHPKAIhBABwggH4QEWAdhBAAwggDEQEWAeRBQIAmEFAgD4QQBCIIABEEA0iDKwCsIOqNerAIwggCkQBXKwDcIPrALwgioO8CumFAAGFUM8CK9kFyQR0eUCQWDoJCYXCNLNGSCcRRBvBRFQ8LAXe7oJ7vSjVCzogHKcHQ3SEaocekgA)
-## Function Declaration
+# Function Declaration
 
 ```ts 
 function func1(x: number, y: number, z: number = 0, description?: string) {
@@ -29,13 +32,13 @@ function func1(x: number, y: number, z: number = 0, description?: string) {
 }
 ```
 
-## Function Expression
+# Function Expression
 
 ```ts
 const func2 = (name: string, age: number) => `${name} (${age})`;
 ```
 
-## Типизация возвращаемого значения
+# Типизация возвращаемого значения
 
 ```ts
 const convertToNumber = (something: unknown): number => Number(something);
@@ -45,7 +48,7 @@ function convertToString(something: unknown): string {
 }
 ```
 
-## Типизация в отрыве от объявления
+# Типизация в отрыве от объявления
 
 ```ts
 type ConvertToString = (something: unknown) => string;
@@ -55,7 +58,7 @@ interface ConvertToNumber {
 }
 ```
 
-## Колбэки
+# Колбэки
 
 [**Link**](https://www.typescriptlang.org/play?#code/MYewdgzgLgBNBOBLMBzCBBe8CGBPGAvDANoCMANDAEyUDMlALALoB0AttgA4AU3iUAUzYBKQgD4YAbwCwAKBgx4AqAFd4YGAGUoSVH0Ei5AX2EBuORdnEA5KWuUaMa4CEQQAIggDhB7MZiyUATFWABbjkFbmxgYAAuGDAVNgAjAXhiJkp+IVECCRl5BRhQSFg4xOSASQNCGAA5eKT4fUzzPIVEADMYbgBCRAhq7GruEvqKzNElVXUSFhmI4Eph8oMmZvzFZTUNOdWYI3JQkiYYbAhYuuTUuTNLORs7B0oXDy8ff0CBAB5FlKYxELzwpF0gYsjkDgpCtAzqV4KM2FVajDGiIdq0Ot1ev1Bt84cJxhspsQZiw5gtzrDlqj1pMtpEdnsDpdZMIgA)
 
@@ -86,7 +89,7 @@ const stringsArray = [1, 2, 3, 4].map((item) => {
 )
 ```
 
-## Допущения при проверке типов
+# Допущения при проверке типов
 
 [**Link**](https://www.typescriptlang.org/play?#code/MYewdgzgLgBNBOBLMBzCMC8MDaByAQiAEa4A0MuAggDaLACmZFAUiABZhNVhgCGuAXQDcAWABQoSLF7x4vAJ7os2bAEZyAJnIBmAeWwa9OI9gAM5czEvWBw8eMnQYKelAAy9VFDaYYACnpqegBbTygALhgAbxggrzZIsABXYKJ6eBgAXwBKTAA+GECQsIA6OJRvUTEHcCcEZDQPeN961AgS4N4ABz8Xd08Ktmyqx2lZBQgmwd8ZOUUO7t7XKe9h+2qxKHku+hgAYSIAMSSwYF8-XkSUtPhyIivU9PJgB5vyABNX9NyMAoA3ECId5VGpSGDBeTHU7nYD3fZHE7AH4FKLiGAwWF+NHomAAWV43hKcjA7xAwT82VI2PR+MJxNJ5Mp1LxBLYRN4JLJFKpYhxLLpHIZFOxazEmRBElqsHg9AgSWosCwEKhwD8ADNEVBEOB-Lw7rlUbyYDKoEl4GAYLwYABqGBEcQ5IRAA)
 
@@ -125,7 +128,7 @@ const result = myFunc(function (a, b) {
 });
 ```
 
-## Перегрузка функций (Function Overloads)
+# Перегрузка функций (Function Overloads)
 
 [**Link**](https://www.typescriptlang.org/play?#code/LAKALgngDgpgBAYQPZIE4BMDOcC8cDaAdgK4C2ARjKgDRwkVW32WoC6A3KJLHAApIBLQmFxwA3qDhwAHgC46ZFpxBSI85lWVSAXusWbQAX2WhQAM2KEAxmAFJCcAOYww-IWAAUVlBkzzkaFgAlPJuwuxwAPSRcEgAblQANkgAhuhwmAKOhClgxKgw5pY2dg7OroLCHnIKDDRwarUstLpNVCF8lWAR0bEJqMlpGVk5eQVF1rb2Ti5hnil6dXAAPog+WLTkAPyLzXBWO22oHXPiUTECpFCJMKQwwrmlw9m5+YUq+-aYIvjStBCiAAMLSBrFEAEFUKgUhAAHQCTCQ6EQDwpIJwLZwFJweT4FKbWhWViSOAFMYOCQfKR-Emqai0uDaekfYxGUwgbyEb5wdAARlE5TmHnwACZaGK4ABmVhBZSc7noEUC2ZdDwAVloGrgatloHlInQkuVFXcHl5tElsqAA)
 
@@ -159,7 +162,7 @@ const d3 = getPoint(1, 3); // No overload expects 2 arguments, but overloads do 
 
 За счет разделения на сигнатуру реализации и сигнатуру перегрузки, тайпскрипт не позволит смешивать перегрузки между собой. В примере выше нельзя вызвать функцию с двумя параметрами, так как в перегрузках нет такого варианта.
 
-## Rest параметры/аргументы
+# Rest параметры/аргументы
 
 [**Link**](https://www.typescriptlang.org/play?#code/GYVwdgxgLglg9mABAWxAG1gBzQTwBRgBciYIyARgKYBOANIgHRPLGkU0DaAugJSIDeAWABQiRNUpQQ1JMgbIAhpjx4AHnwC8APhKIAVInUBuEQF8REBAGcoiBYg0p0WXHgCMABnpv6AJnoAzPQALDxGQA)
 

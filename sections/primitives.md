@@ -1,13 +1,12 @@
-# Примитивы
+[<- Назад](../README.md)
 
-- [Примитивы](#примитивы)
-  - [Null и Undefined](#null-и-undefined)
-  - [Number](#number)
-  - [Boolean](#boolean)
-  - [String](#string)
-    - [Template Literal](#template-literal)
-
-## Null и Undefined
+Оглавление
+- [Null и Undefined](#null-и-undefined)
+- [Number](#number)
+- [Boolean](#boolean)
+- [String](#string)
+  - [Template Literal](#template-literal)
+# Null и Undefined
 
 Если в tsconfig.json файле включён strictNullChecks, то необходимо явно указывать что сущность может быть null или undefined. 
 
@@ -35,7 +34,7 @@ let nameUndefined2: NameOrNull = undefined;
 
 ----------------------------------------
 
-## Number
+# Number
 
 [**Link**](https://www.typescriptlang.org/play?#code/MYewdgzgLgBGCuBbARgUwE4EYYF4aYAYBuAWAChRJZkQQAbVAQzGzynXlVIvGhmnQBLMAHNWMAOQAhEMgndyDWAhQYATLnzFFqarQbMNeAGaM6ELjtgDhIo5ICCdQcFTzy5SnxVp0AZgAuOCRfTUJtHioYGnomMEDo-TjNdk5uL2t2WwSbUU1pWXcyK2DVdAAWIIBWTSruJUTY5kqYU3NUTTaLet1+LNEWiScXN3zh1yKSnwwavBrGCBgMnr0msFnWswsYBaXeKBW+oVENoecJncXloA)
 
@@ -51,7 +50,7 @@ let nameUndefined2: NameOrNull = undefined;
 
 ----------------------------------------
 
-## Boolean
+# Boolean
 
 [**Link**](https://www.typescriptlang.org/play?#code/MYewdgzgLgBGCuBbARgUwE4EYYF4aYAYBuAWAChRJZkQQAbVAQzGzynXlVIvGhmnQBLMAHNWMAOQAhEMgndyDWAhQYATLnzFFqarQbMNeAGaM6ELjtgDhIo5ICCdQcFTzy5SnxVp0AZgAuOCRfTUJtHioYGnomMEDo-TjNdk5uL2t2WwSbUU1pWXcyK2DVdAAWIIBWTSruJUTY5kqYU3NUTTaLet1+LNEWiScXN3zh1yKSnwwavBrGCBgMnr0msFnWswsYBaXeKBW+oVENoecJncXloA)
 
@@ -67,7 +66,7 @@ let boolean5 = false as const // false;
 
 ----------------------------------------
 
-## String
+# String
 
 [**Link**](https://www.typescriptlang.org/play?#code/MYewdgzgLgBGCuBbARgUwE4EYYF4aYAYBuAWAChRJZkQQAbVAQzGzynXlVIvGhmnQBLMAHNWMAOQAhEMgndyDWAhQYATLnzFFqarQbMNeAGaM6ELjtgDhIo5ICCdQcFTzy5SnxVp0AZgAuOCRfTUJtHioYGnomMEDo-TjNdk5uL2t2WwSbUU1pWXcyK2DVdAAWIIBWTSruJUTY5kqYU3NUTTaLet1+LNEWiScXN3zh1yKSnwwavBrGCBgMnr0msFnWswsYBaXeKBW+oVENoecJncXloA)
 
@@ -81,7 +80,7 @@ let string4: 'Alice' = 'Alice'; // 'Alice'
 let string5 = 'Alice' as const; // 'Alice'
 ```
 
-### Template Literal
+## Template Literal
 
 Более гибкий вариант задания строковых типов
 

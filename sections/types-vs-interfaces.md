@@ -1,8 +1,10 @@
-# Type vs Interface
+[<- Назад](../README.md)
 
+Оглавление
 - [Type vs Interface](#type-vs-interface)
-  - [Интерфейс для Объектов](#интерфейс-для-объектов)
-  - [Интерфейсы сливаются, и это хорошо](#интерфейсы-сливаются-и-это-хорошо)
+- [Интерфейс для Объектов](#интерфейс-для-объектов)
+- [Интерфейсы сливаются, и это хорошо](#интерфейсы-сливаются-и-это-хорошо)
+# Type vs Interface
 
 Чаще всего выбор между `type` и `interface` обусловлен привычкой разработчика или общим стилем кода на проекте. Оба подхода позволяют легко решать задачу типизации объета. 
 
@@ -28,7 +30,7 @@ interface Post {
 
 И тут, у самых внимательных из вас уже может возникнуть вопрос, "Типизации **Объекта**?"
 
-## Интерфейс для Объектов
+# Интерфейс для Объектов
 
 Да, тут скрывается первое различие.
 `interface` позволяет описать **только** объектные типы данных. В том числе функции.
@@ -66,7 +68,7 @@ type ImagePost = TextPost & {
 type getImagePost = (id: string) => ImagePost
 ```
 
-## Интерфейсы сливаются, и это хорошо
+# Интерфейсы сливаются, и это хорошо
 
 [**Link**](https://www.typescriptlang.org/play?#code/PTAEBcE8AcFMFgBQSp1AYQIblAXlAN5KigB2mAtrAFygDO4ATgJakDmA3EgL5IoywM2PIWKhMbGmQCuFAEaxGXRN2VIQoVuEUAzTAGMEyRFt0HBAEQD2bUYhLkqtBi3bKSEqaVkKlPPiak2ox6hqDWtkT2oABuVsyGABQAlLRxzAAmyrzG+lakDKAZNrQRIlEekrQAjAA0Yo5SAOQAygAWmCwA1k310emGtCl4AHygeQVWADawAHRTNolNgMgggAwggEwgTck8QA)
 
